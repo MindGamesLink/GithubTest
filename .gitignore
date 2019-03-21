@@ -1,3 +1,4 @@
 # https://stackoverflow.com/questions/24410208/gitignore-does-not-ignore-folder
 # git rm -r --cached <folder>
 data/
+.DS_Store

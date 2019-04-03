@@ -82,3 +82,16 @@ router.post('/name-handler', async (ctx) => {
 app.use(router.routes());
 app.listen(3000);
 console.log("Server started.");
+
+
+/*
+https://dzone.com/articles/vertical-scaling-and-horizontal-scaling-in-aws
+
+How To Achieve Effective Horizontal Scaling:
+
+The first is to make your application stateless on the server side as much as possible. Any time your application has to rely on server-side tracking of what it’s doing at a given moment, that user session is tied inextricably to that particular server. If, on the other hand, all session-related specifics are stored browser-side, that session can be passed seamlessly across literally hundreds of servers. The ability to hand a single session (or thousands or millions of single sessions) across servers interchangeably is the very epitome of horizontal scaling.
+
+The second goal to keep square in your sights is to develop your app with a service-oriented architecture. The more your app is comprised of self-contained but interacting logical blocks, the more you’ll be able to scale each of those blocks independently as your use load demands. Be sure to develop your app with independent web, application, caching and database tiers. This is critical for realizing cost savings – because, without this microservice architecture, you’re going to have to scale up each component of your app to the demand levels of the services tier getting hit the hardest.
+
+When designing your application, you must factor a scaling methodology into the design – to plan for handling increased load on your system, when that time arrives. This is should not be done as an afterthought, but rather as part of the initial architecture and its design.
+*/

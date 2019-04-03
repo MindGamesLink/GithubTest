@@ -4,10 +4,12 @@
   "description": "Devops project for Stepa",
   "main": "index.js",
   "dependencies": {
+    "chai": "^4.2.0",
     "koa": "^2.7.0",
     "koa-bodyparser": "^4.2.1",
     "koa-route": "^3.2.0",
     "koa-router": "^7.4.0",
+    "mocha": "^6.0.2",
     "mongodb": "^2.2.36"
   },
   "devDependencies": {},

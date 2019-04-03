@@ -1,4 +1,7 @@
-node {  
+node {
+    stage('Git Clone') {
+        git 'https://github.com/MindGamesLink/GithubTest'
+    }  
     stage('Build') { 
          step([$class: 'DockerComposeBuilder',
                 dockerComposeFile: 'docker-compose.yml',

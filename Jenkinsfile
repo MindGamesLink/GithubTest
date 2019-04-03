@@ -5,7 +5,8 @@ node {
     stage('Build') {
         sh label: '',
            script: '''#!/bin/bash
-                      id -a''' 
+                      id -a
+                      echo $HOME /local/home/$USER/''' 
          step([$class: 'DockerComposeBuilder',
                 dockerComposeFile: 'docker-compose.yml',
                 option: [$class: 'StartAllServices'],

@@ -1,16 +1,16 @@
 pipeline {
     agent any
     stages {
-        stage('Pull Repo') {
-            steps {
-                sh '''
-                   #!/bin/bash
-                   rm -rf ./*
-                   rm -rf ./.* 2> /dev/null
-                   '''
-                git 'https://github.com/MindGamesLink/GithubTest.git'
-            }
-        }
+        // stage('Pull Repo') {
+        //     steps {
+        //         sh '''
+        //            #!/bin/bash
+        //            rm -rf ./*
+        //            rm -rf ./.* 2> /dev/null
+        //            '''
+        //         git 'https://github.com/MindGamesLink/GithubTest.git'
+        //     }
+        // }
         stage('Build') {
             steps {
                 sh '''

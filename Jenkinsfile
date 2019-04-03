@@ -2,7 +2,10 @@ node {
     stage('Git Clone') {
         git 'https://github.com/MindGamesLink/GithubTest'
     }  
-    stage('Build') { 
+    stage('Build') {
+        sh label: '',
+           script: '''#!/bin/bash
+                      id -a''' 
          step([$class: 'DockerComposeBuilder',
                 dockerComposeFile: 'docker-compose.yml',
                 option: [$class: 'StartAllServices'],

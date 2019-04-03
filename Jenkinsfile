@@ -10,9 +10,11 @@ node {
                       id -a
                       echo $HOME /home/$USER/'''
                       // /var/lib/jenkins /local/home/jenkins/
-         step([$class: 'DockerComposeBuilder',
-                dockerComposeFile: 'docker-compose.yml',
-                option: [$class: 'StartAllServices'],
-                useCustomDockerComposeFile: true])
+        step([$class: 'DockerComposeBuilder',
+               dockerComposeFile: 'docker-compose.yml',
+               option: [$class: 'StartService',
+                         scale: 1,
+                         service: 'app'],
+               useCustomDockerComposeFile: true])
     }
 }

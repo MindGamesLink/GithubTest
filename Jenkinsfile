@@ -8,7 +8,7 @@ node {
         sh label: '',
            script: '''
                    #!/bin/bash
-                   echo $HOME /home/$USER/
+                   echo $HOME $USER
                    ls /etc/sudoers.d/
                    env
                    '''

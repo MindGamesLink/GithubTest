@@ -10,9 +10,9 @@ node {
                    #!/bin/bash
                    echo $HOME $USER
                    ls /etc/sudoers.d/
-                   env
+                   pwd
                    '''
-        pwd()
+        env.getEnvironment()
                       // /var/lib/jenkins /local/home/jenkins/
         //  step([$class: 'DockerComposeBuilder',
         //         dockerComposeFile: 'docker-compose.yml',

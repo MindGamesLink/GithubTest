@@ -1,5 +1,6 @@
 // #!/bin/bash
 // Test Deploy
+//test
 node {
     // stage('Git Clone') {
     //     git 'https://github.com/MindGamesLink/GithubTest'
@@ -13,7 +14,6 @@ node {
                    pwd
                    '''
         echo sh(returnStdout: true, script: 'env')
-                      
         //  step([$class: 'DockerComposeBuilder',
         //         dockerComposeFile: 'docker-compose.yml',
         //         option: [$class: 'StartAllServices'],

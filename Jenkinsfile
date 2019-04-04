@@ -9,9 +9,10 @@ node {
            script: '''
                    #!/bin/bash
                    echo $HOME /home/$USER/
-                   pwd()
                    ls /etc/sudoers.d/
+                   env
                    '''
+        pwd()
                       // /var/lib/jenkins /local/home/jenkins/
         //  step([$class: 'DockerComposeBuilder',
         //         dockerComposeFile: 'docker-compose.yml',

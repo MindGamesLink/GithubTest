@@ -13,7 +13,7 @@ node {
                    pwd
                    '''
         echo sh(returnStdout: true, script: 'env')
-                      // /var/lib/jenkins /local/home/jenkins/
+                      
         //  step([$class: 'DockerComposeBuilder',
         //         dockerComposeFile: 'docker-compose.yml',
         //         option: [$class: 'StartAllServices'],

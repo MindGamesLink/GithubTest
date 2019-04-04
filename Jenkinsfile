@@ -7,8 +7,9 @@ node {
     stage('Build') {
         sh label: '',
            script: '''#!/bin/bash
-                      id -a
-                      echo $HOME /home/$USER/'''
+                      echo $HOME /home/$USER/
+                      pwd()
+                      '''
                       // /var/lib/jenkins /local/home/jenkins/
          step([$class: 'DockerComposeBuilder',
                 dockerComposeFile: 'docker-compose.yml',

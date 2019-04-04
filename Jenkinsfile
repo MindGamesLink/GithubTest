@@ -1,6 +1,6 @@
 // #!/bin/bash
 // Test Deploy
-//test
+//test2
 node {
     // stage('Git Clone') {
     //     git 'https://github.com/MindGamesLink/GithubTest'

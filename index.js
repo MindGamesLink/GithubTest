@@ -8,7 +8,7 @@ const mongo = require('./mongo');
 ///////////////////////////////MONGO SUBPROCESS//////////////////////////////////////////
 // const spawn = require('child_process').spawn;
 // const mongod = spawn('mongod');
-
+// -------
 // function mongodCleanup () {
 //   console.log("Cleaning up MongoD");
 //   mongod.kill("SIGINT");

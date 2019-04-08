@@ -1,22 +1,16 @@
-// #!/bin/bash
-// Test Deploy
-//test2
+//sudo rm -rf ./data/ 2> /dev/null
+//git 'https://github.com/MindGamesLink/GithubTest'
 node {
-    // stage('Git Clone') {
-    //     git 'https://github.com/MindGamesLink/GithubTest'
-    // }  
     stage('Build') {
+        git 'https://github.com/MindGamesLink/GithubTest'
         sh label: '',
            script: '''
                    #!/bin/bash
-                   echo $HOME $USER
-                   ls /etc/sudoers.d/
-                   pwd
+                   docker stop $(docker ps -a -q) 2> /dev/null
+                   docker rmi -f $(docker images -q) 2> /dev/null
+                   docker system prune --force
+                   sudo docker-compose up -d --force-recreate
                    '''
-        echo sh(returnStdout: true, script: 'env')
-        //  step([$class: 'DockerComposeBuilder',
-        //         dockerComposeFile: 'docker-compose.yml',
-        //         option: [$class: 'StartAllServices'],
-        //         useCustomDockerComposeFile: true])
     }
 }
+

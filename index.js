@@ -1,3 +1,4 @@
+const sqreen = require('sqreen');
 const Koa = require('koa');
 const app = new Koa();
 const bodyParser = require('koa-bodyparser');
@@ -45,7 +46,7 @@ router.get('/', async (ctx) => {
         <title>Si vis pacem, para bellum</title>
     </head>
     <body>
-      <h1>Welcome</h1>
+      <h1>Welcome3</h1>
         <br>
       <fieldset>
         <legend>What is your name?</legend>
@@ -66,6 +67,9 @@ router.get('/', async (ctx) => {
       </ul>
     </div>
     </body>
+    <footer>
+    <a title="Realtime application protection" href="https://www.sqreen.com/?utm_source=badge"><img style="width:109px;height:36px" src="https://s3-eu-west-1.amazonaws.com/sqreen-assets/badges/20171107/sqreen-dark-badge.svg" alt="Sqreen | Runtime Application Protection" /></a>
+    </footer>
     </html>`;
 
     ctx.body = content;

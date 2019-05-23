@@ -1,12 +1,12 @@
 const MongoClient = require('mongodb').MongoClient;
 const assert = require('assert');
-const url = 'mongodb://mgalanter:test-task-def-x@docdb-2019-05-22-05-35-58.cluster-cbbtcoyyad9w.us-east-1.docdb.amazonaws.com:27017';
+const url = 'mongodb://mongodb:27017/';
 //const url = 'mongodb://localhost:27017';
 const dbName = 'devopsproject';
 const client = new MongoClient(url);
 
 async function registerName (name) {
-    const connection = await client.connect(url, {useNewUrlParser: true});
+    const connection = await client.connect(url);
     const db = await connection.db(dbName);
     await db.collection('names').insertOne(name, function (err, r) {
         assert.equal(null, err);
